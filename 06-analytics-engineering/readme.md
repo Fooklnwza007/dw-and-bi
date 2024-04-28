@@ -81,11 +81,12 @@ dbt test
 ![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/4cc47d15-bb45-4026-a4d8-5500007c9dc2)
 
 
-12. ออกจาก ENV
-```sh
-deactivate
-```
-13. ปิดการทำงาน docker
+12. ปิดการทำงาน docker
 ```sh
 docker compose down
 ```
+13. ออกจาก ENV
+```sh
+deactivate
+```
+
