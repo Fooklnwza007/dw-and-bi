@@ -8,6 +8,9 @@ cd 06-analytics-engineering
 ```sh
 docker compose up
 ```
+
+![alt text](image-7.png)
+
 2. สร้าง ENV สำหรับการเขียน code Python และเก็บ package
 ```sh
 python -m venv ENV
@@ -24,32 +27,52 @@ pip install dbt-core dbt-postgres
 ```sh
 dbt init
 ```
-6. หลังจากสร้าง profiles project สร้าง file ใน folder ds525/models ด้วยชื่อ profiles.yml
+![alt text](image-5.png)
+
+
+6. เข้าไปใน Folder ds525 (ยังอยู่ใน ENV)
+```sh
+cd ds525
+```
+7. หลังจากสร้าง profiles project สร้าง file ใน folder ds525/models ด้วยชื่อ profiles.yml
 และนำข้อมูลทั้งหมดจาก code ด้านล่าง มาใส่ไว้ใน file profiles.yml ที่เราสร้างใน ds525/models 
 ```sh
 code /home/codespace/.dbt/profiles.yml
 ```
-7. ทดสอบการ connection กับ postgres
+
+![alt text](image-6.png)
+
+8. ทดสอบการ connection กับ postgres
 ```sh
 dbt debug
 ```
-8. เข้าไปใน Folder ds525 (ยังอยู่ใน ENV)
-```sh
-cd ds525
-```
+
+![alt text](image.png)
+
 9. ทดสอบการ connection กับ postgres
 ```sh
 dbt debug
 ```
+![alt text](image-1.png)
+
 10. การนำข้อมูลขึ้นบน postgres จะใช้ข้อมูลจาก ds525/models .sql และใช้โครงสร้างในการ source ข้อมูลจาก _src.yml /
 dbt_project.yml ใช้ในการกำหนดโครงสร้างชื่อหรือประเภท tables/view ที่สร้าง และไม่สนใจโครงสร้างของ folder
 ```sh
 dbt run
 ```
+
+![alt text](image-3.png)
+
+![alt text](image-2.png)
+
+
 11. จากนั้นรันคำสั่ง test เพื่อเช็ค data quality
 ```sh
 dbt test
 ```
+
+![alt text](image-4.png)
+
 12. ออกจาก ENV
 ```sh
 deactivate
