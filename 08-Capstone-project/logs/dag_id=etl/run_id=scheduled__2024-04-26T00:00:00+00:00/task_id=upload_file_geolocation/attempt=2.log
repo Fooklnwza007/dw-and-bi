@@ -1,0 +1,20 @@
+[2024-04-27T06:52:55.230+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-27T06:52:55.438+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl.upload_file_geolocation scheduled__2024-04-26T00:00:00+00:00 [queued]>
+[2024-04-27T06:52:55.573+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl.upload_file_geolocation scheduled__2024-04-26T00:00:00+00:00 [queued]>
+[2024-04-27T06:52:55.578+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2024-04-27T06:52:55.772+0000] {taskinstance.py:2327} INFO - Executing <Task(LocalFilesystemToGCSOperator): upload_file_geolocation> on 2024-04-26 00:00:00+00:00
+[2024-04-27T06:52:55.947+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl', 'upload_file_geolocation', 'scheduled__2024-04-26T00:00:00+00:00', '--job-id', '409', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmprnj4kbj8']
+[2024-04-27T06:52:56.010+0000] {standard_task_runner.py:91} INFO - Job 409: Subtask upload_file_geolocation
+[2024-04-27T06:52:56.029+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=9942) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-04-27T06:52:56.054+0000] {standard_task_runner.py:63} INFO - Started process 10100 to run task
+[2024-04-27T06:52:56.486+0000] {task_command.py:426} INFO - Running <TaskInstance: etl.upload_file_geolocation scheduled__2024-04-26T00:00:00+00:00 [running]> on host b619dce40a27
+[2024-04-27T06:52:57.325+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl' AIRFLOW_CTX_TASK_ID='upload_file_geolocation' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-26T00:00:00+00:00'
+[2024-04-27T06:52:57.340+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-27T06:52:57.582+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-04-27T06:52:57.662+0000] {base.py:84} INFO - Using connection ID 'my_gcp_conn' for task execution.
+[2024-04-27T06:53:03.285+0000] {gcs.py:557} INFO - File /opt/***/dags/data/olist_geolocation_dataset.csv uploaded to olist_geolocation_dataset.csv in swu-ds-525-112233 bucket
+[2024-04-27T06:53:03.286+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-27T06:53:03.312+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=etl, task_id=upload_file_geolocation, execution_date=20240426T000000, start_date=20240427T065255, end_date=20240427T065303
+[2024-04-27T06:53:03.401+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-04-27T06:53:03.484+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-04-27T06:53:03.492+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
