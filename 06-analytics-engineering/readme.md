@@ -9,7 +9,8 @@ cd 06-analytics-engineering
 docker compose up
 ```
 
-![alt text](image-7.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/eb32d88c-0ae9-489b-9434-86b0007b64e8)
+
 
 2. สร้าง ENV สำหรับการเขียน code Python และเก็บ package
 ```sh
@@ -27,7 +28,8 @@ pip install dbt-core dbt-postgres
 ```sh
 dbt init
 ```
-![alt text](image-5.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/d77fbfde-50cc-42c1-b29b-65b01705c065)
+
 
 
 6. เข้าไปใน Folder ds525 (ยังอยู่ใน ENV)
@@ -40,20 +42,23 @@ cd ds525
 code /home/codespace/.dbt/profiles.yml
 ```
 
-![alt text](image-6.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/6e3f0dce-4948-43c8-8aca-7c860fe94eb0)
+
 
 8. ทดสอบการ connection กับ postgres
 ```sh
 dbt debug
 ```
 
-![alt text](image.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/22cf763d-f128-4096-ae11-fe01201b1003)
+
 
 9. ทดสอบการ connection กับ postgres
 ```sh
 dbt debug
 ```
-![alt text](image-1.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/b10c2f68-788d-4dd9-9ce0-6b94fb143a6e)
+
 
 10. การนำข้อมูลขึ้นบน postgres จะใช้ข้อมูลจาก ds525/models .sql และใช้โครงสร้างในการ source ข้อมูลจาก _src.yml /
 dbt_project.yml ใช้ในการกำหนดโครงสร้างชื่อหรือประเภท tables/view ที่สร้าง และไม่สนใจโครงสร้างของ folder
@@ -61,9 +66,11 @@ dbt_project.yml ใช้ในการกำหนดโครงสร้า�
 dbt run
 ```
 
-![alt text](image-3.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/4cf15b95-b85a-44c9-99e6-bd167705d520)
 
-![alt text](image-2.png)
+
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/25035386-4aeb-4406-b481-523208b47cb0)
+
 
 
 11. จากนั้นรันคำสั่ง test เพื่อเช็ค data quality
@@ -71,13 +78,15 @@ dbt run
 dbt test
 ```
 
-![alt text](image-4.png)
+![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/4cc47d15-bb45-4026-a4d8-5500007c9dc2)
 
-12. ออกจาก ENV
-```sh
-deactivate
-```
-13. ปิดการทำงาน docker
+
+12. ปิดการทำงาน docker
 ```sh
 docker compose down
 ```
+13. ออกจาก ENV
+```sh
+deactivate
+```
+
